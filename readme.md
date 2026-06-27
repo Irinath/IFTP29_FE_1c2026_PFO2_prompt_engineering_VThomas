@@ -66,7 +66,7 @@ una portada de acceso.
    Subir todo el código del proyecto a un único repositorio de GitHub. El archivo README.md del repositorio debe detallar obligatoriamente la siguiente información de forma clara:
 
    - [X] Datos del estudiante.
-   - [ ] Link al deploy unificado (un solo enlace de Vercel que dirija a la portada con las tres opciones).
+   - [X] Link al deploy unificado (un solo enlace de Vercel que dirija a la portada con las tres opciones).
    - [X] El prompt exacto utilizado.
    - [ ] Capturas de pantalla de ambos sitios web generados.
 
@@ -84,14 +84,14 @@ una portada de acceso.
 
 #### LINKS DE DEPLIEGUE Y REPOSITORIO
 
-[DEPLOY EN VERCEL]()
+[DEPLOY EN VERCEL](https://iftp-29-fe-1c2026-pfo-2-prompt-engi.vercel.app/)
 
 [REPOSITORIO EN GITHUB](https://github.com/Irinath/IFTP29_FE_1c2026_PFO2_prompt_engineering_VThomas.git)
 
 #### PROMPT UTILIZADO
 
 > [!IMPORTANT]  
-> El prompt creado a partir de la aplicación de buenas prácticas de *ingeniería de prompt* donde se asigna un rol,un contexto, se enumera stack tecnológico, se diseña el árbol de carpetas, se asigna una paleta de estilos, se contextualiza dentro de que parámetros puede y en cuales no debe crear el desarrollo.
+> El prompt creado a partir de la aplicación de buenas prácticas de *ingeniería de prompt* donde se asigna un rol, un contexto, se enumera stack tecnológico, se diseña el árbol de carpetas, se asigna una paleta de estilos, se contextualiza dentro de que parámetros puede y en cuales no debe crear el desarrollo.
 >
 
 ```Markdown
@@ -300,5 +300,19 @@ El archivo debe poder guardarse como index.html y abrirse directamente en el nav
 </output_format>
 ```
 
->- KIRO - CLAUDE SONET 4.5
->- OPENCODE - BIG PICKLE (OPENCODE ZEN).
+---
+
+#### CAPTURA DE PANTALLA DE AMBOS SITIOS WEB GENERADOS
+
+>[!IMPORTANT]
+>
+>| KIRO - CLAUDE SONET 4.5      | OPENCODE - BIG PICKLE (OPENCODE ZEN) |
+>| :--------------------------: | :----------------------------------: |
+>| CAPTURA DE PANTALLA           | CAPTURA DE PANTALLA                  |
+>| ![KIRO-1200PX](./images/Captura%20de%20pantalla%202026-06-27%20015542.png) | ![OPENCODE-1200PX](./images/Captura%20de%20pantalla%202026-06-27%20031113.png) |
+>| ![KIRO-NOSOTROS](./images/Captura%20de%20pantalla%202026-06-27%20015603.png) | ![OPENCODE-NOSOTROS](./images/Captura%20de%20pantalla%202026-06-27%20022738.png) |
+>| ![KIRO-SERVICIOS](./images/Captura%20de%20pantalla%202026-06-27%20015636.png)| ![OPENCODE-SERVICIOS](./images/Captura%20de%20pantalla%202026-06-27%20022553.png) |
+>| ![KIRO-TESTIMONIOS](./images/Captura%20de%20pantalla%202026-06-27%20015717.png) | ![OPENCODE-TESTIMONIOS](./images/Captura%20de%20pantalla%202026-06-27%20033639.png)|
+>|![KIRO-CONTACTO](./images/Captura%20de%20pantalla%202026-06-27%20015730.png) |![OPENCODE-CONTACTO](./images/Captura%20de%20pantalla%202026-06-27%20034340.png) |
+>|![KIRO-FOOTER](./images/Captura%20de%20pantalla%202026-06-27%20015748.png) |![OPENCODE-FOOTER](./images/Captura%20de%20pantalla%202026-06-27%20034612.png) |
+>| | |
