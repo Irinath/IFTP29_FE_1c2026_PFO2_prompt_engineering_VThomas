@@ -65,10 +65,11 @@ una portada de acceso.
 5. Repositorio y Documentación:  
    Subir todo el código del proyecto a un único repositorio de GitHub. El archivo README.md del repositorio debe detallar obligatoriamente la siguiente información de forma clara:
 
-   - [X] Datos del estudiante.
-   - [X] Link al deploy unificado (un solo enlace de Vercel que dirija a la portada con las tres opciones).
-   - [X] El prompt exacto utilizado.
-   - [ ] Capturas de pantalla de ambos sitios web generados.
+   - [X] [Datos del estudiante](#datos-del-estudiante)
+   - [X] [Link al deploy unificado](https://iftp-29-fe-1c2026-pfo-2-prompt-engi.vercel.app/)
+   - [X] [El prompt exacto utilizado](#prompt-utilizado)
+   - [X] [Capturas de pantalla de ambos sitios web generados](#captura-de-pantalla-de-ambos-sitios-web-generados)
+   - [X] [Conclusión](#conclusion)
 
 ---
 
@@ -315,4 +316,38 @@ El archivo debe poder guardarse como index.html y abrirse directamente en el nav
 >| ![KIRO-TESTIMONIOS](./images/Captura%20de%20pantalla%202026-06-27%20015717.png) | ![OPENCODE-TESTIMONIOS](./images/Captura%20de%20pantalla%202026-06-27%20033639.png)|
 >|![KIRO-CONTACTO](./images/Captura%20de%20pantalla%202026-06-27%20015730.png) |![OPENCODE-CONTACTO](./images/Captura%20de%20pantalla%202026-06-27%20034340.png) |
 >|![KIRO-FOOTER](./images/Captura%20de%20pantalla%202026-06-27%20015748.png) |![OPENCODE-FOOTER](./images/Captura%20de%20pantalla%202026-06-27%20034612.png) |
->| | |
+>|![KIRO-PANTALLA<480PX](./images/Captura%20de%20pantalla%202026-06-27%20021306.png) |![OPENCODE-PANTALLA<480px](./images/Captura%20de%20pantalla%202026-06-27%20022301.png) |
+>|![KIRO-PANTALLA>769px](./images/Captura%20de%20pantalla%202026-07-01%20010428.png) |![OPENCODE-PANTALLA<768px](./images/Captura%20de%20pantalla%202026-06-27%20022524.png)|
+>|![KIRO-PANTALLA<1100px](./images/Captura%20de%20pantalla%202026-07-01%20010641.png) |![OPENCODE-PANTALLA>768px](/images/Captura%20de%20pantalla%202026-06-27%20022553.png) |
+>|![KIRO-MENUHAMBURG-CLOSE](./imageS/Captura%20de%20pantalla%202026-07-01%20010715.png) |![OPENCLODE-MENUHAMBURG-CLOSE](./images/Captura%20de%20pantalla%202026-07-01%20010933.png) |
+>|![KIRO-MENUHAMBURG-OPEN](./images/Captura%20de%20pantalla%202026-07-01%20010733.png) |![OPENCODE-MENUHAMBURG-OPEN](./images/Captura%20de%20pantalla%202026-07-01%20010945.png) |
+
+---
+---
+
+### CONCLUSION
+
+En general ambos agentes generaron páginas web con visual agradable, en sí se les acotó bastante el accionar, intentado minimizar la generación de código inutil y que mantenga los lineamientos generales sin "delirar".
+Lo observable es el diseño moderno aplicado por CLAUDE SONNET 4.5, marcado por títulos con tipografía System-ui y un carrusel para los testimonios, mientras que BIG PICKLE aplica un diseño más formal con tipografía Serif en los títulos y presenta los testimonios como tarjetas estáticas, ambos utilizan una tipografía SanSerif para el cuerpo de la página.
+Ambos mostraron adaptación a distintos tamaños de pantallas, aunque OPENCODE con BIG PICKLE presenta poca adaptación a pantallas pequellas sobre el navbar entre 480px y 600px y pocas o nula animaciones en el diseño.
+
+---
+
+#### Análisis Técnico Detallado
+
+**Arquitectura**: Kiro interpretó el espíritu del prompt generando una arquitectura modular de 3 archivos (HTML, CSS, JS), mientras OpenCode siguió la letra literal con un archivo único embebido. Esta diferencia refleja dos filosofías: Kiro priorizó mantenibilidad y escalabilidad; OpenCode, adherencia estricta y simplicidad.
+
+**Interactividad**: La diferencia más notable está en los testimonios. Kiro implementó un carrusel completo con controles, auto-play, soporte táctil y 8+ animaciones @keyframes complejas. OpenCode optó por cards estáticas con 2-3 animaciones básicas, resultando en una experiencia más sobria pero menos dinámica.
+
+**Tipografía**: Kiro utilizó el system font stack (Segoe UI) con escala fluida mediante clamp(), logrando un look tech/startup moderno. OpenCode combinó Google Fonts (Playfair Display serif + DM Sans) generando un contraste editorial más formal y corporativo.
+
+**Responsividad**: Ambos cumplen los 4 breakpoints solicitados, pero Kiro mostró mayor refinamiento en transiciones y edge cases. OpenCode presentó problemas visuales en el navbar entre 480-600px, confirmando la observación inicial sobre menor adaptación a pantallas pequeñas.
+
+**Performance**: El enfoque de archivo único de OpenCode reduce HTTP requests iniciales pero sacrifica cacheo granular. Kiro, con 3 archivos, permite cacheo independiente de CSS/JS, optimizando cargas posteriores. Ambos usan IntersectionObserver y passive listeners para eficiencia.
+
+**Adherencia al Prompt**: Esta comparativa demuestra cómo diferentes LLMs interpretan instrucciones. Claude Sonnet 4.5 (Kiro) balanceó literalidad con mejores prácticas profesionales, mientras Big Pickle (OpenCode) priorizó seguir instrucciones al pie de la letra, revelando trade-offs interesantes en prompt engineering para desarrollo de software.
+
+---
+
+Respecto al flujo de trabajo, la experiencia con ambas herramientas resultó diferente más allá del código generado. Kiro, al operar dentro de un entorno integrado con acceso directo al proyecto, permitió iterar sobre los archivos de forma más natural, revisando y ajustando secciones sin perder el contexto de lo ya construido. OpenCode, en cambio, demostró ser una herramienta más directa y predecible desde la terminal, útil cuando se prioriza control explícito sobre el output y trazabilidad del proceso. En términos de prompt engineering, quedó en evidencia que la especificidad de las instrucciones impacta distinto según el agente: lo que para uno es una restricción clara, para el otro puede ser apenas una sugerencia. Esto sugiere que adaptar el prompt al modelo y a la herramienta es tan importante como el contenido del prompt en sí.
+
